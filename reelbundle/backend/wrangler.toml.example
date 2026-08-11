@@ -1,0 +1,18 @@
+name = "reel-vault-fulfilment"
+main = "fulfilment-worker.js"
+compatibility_date = "2026-08-11"
+
+[vars]
+FROM_EMAIL = "Reel Vault <access@example.com>"
+PRODUCT_NAME = "Creator Reel Vault 2026"
+EXPECTED_AMOUNT_PAISE = "19900"
+RAZORPAY_PAYMENT_LINK_ID = "plink_REPLACE_ME"
+
+[[kv_namespaces]]
+binding = "FULFILLED"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+# Set these with wrangler secret put:
+# RAZORPAY_WEBHOOK_SECRET
+# RESEND_API_KEY
+# DRIVE_LINK
